@@ -25,7 +25,7 @@ SECRET_KEY = 'y#o-7d7+!f=$1_s5n3ka0$ur(t4vftfac+_251juv^^btbc5+6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -121,3 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# LOGIN_URL = 'accounts.views.login'
+LOGIN_URL = 'accounts:error'
