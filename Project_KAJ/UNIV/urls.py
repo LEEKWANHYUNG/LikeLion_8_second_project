@@ -4,7 +4,9 @@ from . import views
 
 app_name = 'UNIV'
 
-
 urlpatterns = [
-    path('detail/',views.detail,name='detail'),
+    path('detail/<int:blog id>',views.detail,name='detail'),
+    path('create/<int:blog id>',views.create,name='create'),
+    path('read/<int:blog id>',views.read,name='read'),
+    path('update/<int:blog id>',views.update,name='update'),
 ]
