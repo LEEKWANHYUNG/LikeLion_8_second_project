@@ -1,3 +1,5 @@
+
+<br><br><br><br><br>
 <form method="POST" action="{% url 'accounts:login'%}">
     {% csrf_token %}
 id:<input type="text" name="username"  required="required" placeholder="Your id"><br>
@@ -8,3 +10,4 @@ ps:<input type="password" name="password"   required="required" placeholder="You
   <a href="{% url 'accounts:signup' %}" >signup</a>
 
 </form>
+

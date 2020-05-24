@@ -32,6 +32,8 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{% url 'accounts:login' %}">login <span class="sr-only">(current)</span></a>
                 </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'UNIV:detail' %}">TEST <span class="sr-only">(current)</span></a>
                 {% else %}   <!-- 만약에 로그인 되면은 로그인만뜨고-->
                 <li class="nav-item active">
                     <a class="nav-link" href="{% url 'accounts:logout' %}">Log out <span class="sr-only">(current)</span></a>
