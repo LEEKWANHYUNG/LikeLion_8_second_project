@@ -39,12 +39,15 @@
                     <a class="nav-link" href="{% url 'accounts:login' %}">로그인 <span
                             class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">나의 페이지 <span class="sr-only">(current)</span></a>
+               
                     {% else %}
                     <!-- 만약에 로그인 되면은 로그인만뜨고-->
                 <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'accounts:logout' %}">Log out <span
+                    <a class="nav-link" href="{% url 'accounts:logout' %}">로그아웃하렴 <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">나의 페이지 <span
                             class="sr-only">(current)</span></a>
                 </li>
                 {% endif %}
