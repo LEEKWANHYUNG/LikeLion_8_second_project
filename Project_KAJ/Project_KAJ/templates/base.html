@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>김앤장프로젝트</title>
 
 
 
@@ -15,55 +15,69 @@
 </head>
 
 <body>
+
+
+
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="{% url 'home' %}">Navbar</a>
+        <a class="navbar-brand" href="{% url 'home' %}">우리의 대학생활일기 ^^</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" >
             <ul class="navbar-nav mr-auto">
-        {% if not user.is_authenticated %}     <!-- 유저 로그인 상태확인해주는거임-->
+                {% if not user.is_authenticated %}
+                <!-- 유저 로그인 상태확인해주는거임-->
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'accounts:signup' %}">Sign Up <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{% url 'accounts:signup' %}">회원가입 <span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'accounts:login' %}">login <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{% url 'accounts:login' %}">로그인 <span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'UNIV:detail' %}">TEST <span class="sr-only">(current)</span></a>
-                {% else %}   <!-- 만약에 로그인 되면은 로그인만뜨고-->
+                    <a class="nav-link" href="#">나의 페이지 <span class="sr-only">(current)</span></a>
+                    {% else %}
+                    <!-- 만약에 로그인 되면은 로그인만뜨고-->
                 <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'accounts:logout' %}">Log out <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{% url 'accounts:logout' %}">Log out <span
+                            class="sr-only">(current)</span></a>
                 </li>
-                {% endif %}      <!-- 로그아웃 안되게 하면 뭐 하나만뜨게해주는거임-->
-                <li class="nav-item">
+                {% endif %}
+                <!-- 로그아웃 안되게 하면 뭐 하나만뜨게해주는거임-->
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
-                </li>
+                </li> -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
+                        술자리
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">술자리 예절</a>
+                        <a class="dropdown-item" href="#">술게임</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">술자리 금기</a>
                     </div>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
+                </li> -->
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+            <!-- <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            </form> -->
         </div>
     </nav>
+
+    {% block content %}
+    {% endblock %}
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -74,6 +88,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>
