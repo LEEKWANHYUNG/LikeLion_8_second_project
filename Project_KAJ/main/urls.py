@@ -1,12 +1,14 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from . import views
 
-app_name = 'main'
+# app_name = 'main'
 
 urlpatterns = [
-    # path('detail/<int:blog id>',views.detail,name='detail'),
-    # path('create/<int:blog id>',views.create,name='create'),
+    path('',views.home, name = "home"),
+    path('<int:blog_id>',views.detail,name="detail"),
+    path('create',views.create,name="create"),
     # path('read/<int:blog id>',views.read,name='read'),
-    # path('update/<int:blog id>',views.update,name='update'),
+    path('update/<int:blog_id>',views.update, name="update"),
+    path('new',views.new, name ="new"),
 ]
