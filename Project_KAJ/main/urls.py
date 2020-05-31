@@ -5,10 +5,12 @@ from . import views
 # app_name = 'main'
 
 urlpatterns = [
-    path('',views.home, name = "home"),
-    path('<int:blog_id>',views.detail,name="detail"),
-    path('create',views.create,name="create"),
-    # path('read/<int:blog id>',views.read,name='read'),
-    path('update/<int:blog_id>',views.update, name="update"),
-    path('new',views.new, name ="new"),
+    path('', views.home, name="home"),
+    path('<int:blog_id>', views.detail, name="detail"),
+    path('create', views.create, name="create"),
+    path('update/<int:blog_id>', views.update, name="update"),
+    path('edit/<int:blog_id>', views.edit, name="edit"),
+    path('new', views.new, name="new"),
+    path('delete/<int:blog_id>', views.delete, name= "delete"),
+
 ]
