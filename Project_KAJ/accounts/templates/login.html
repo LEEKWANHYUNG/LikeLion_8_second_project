@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="div" >
+  <form method="POST" action="{% url 'accounts:login'%}">
+    {% csrf_token %}
+    <br>
+    아이디:<input type="text" name="username" required="required" placeholder="Your id"><br><br>
 
-<form method="POST" action="{% url 'accounts:login'%}">
-  {% csrf_token %}
-  아이디:<input type="text" name="username" required="required" placeholder="Your id"><br>
+    비밀번호:<input type="password" name="password" required="required" placeholder="Your password"><br><br>
 
-  비밀번호:<input type="password" name="password" required="required" placeholder="Your password"><br>
+    <input type="submit" value="Sign in"><br><br><br>
+    <a href="{% url 'accounts:signup' %}">회원가입쳐라</a>
 
-  <input type="submit" value="Sign in"><br>
-  <a href="{% url 'accounts:signup' %}">회원가입쳐라</a>
-
-</form>
-
+  </form>
+</div>
 
 {% endblock %}
