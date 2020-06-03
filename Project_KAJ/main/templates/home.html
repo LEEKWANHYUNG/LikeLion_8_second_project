@@ -1,12 +1,55 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        a:link {color: black}
+        body {
+        background-color: beige;}
+    </style>
+</head>
+<body>
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner" style="text-align: center;">
+          <div class="carousel-item active" >
+            <img src="{% static '술자리.jpg'%}" alt="Los Angeles" width="500" height="auto">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static '술자리예절.jpg'%}" alt="Chicago" width="265" height="auto">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static '술자리.jpg'%}" alt="New York" width="500" height="auto">
+          </div>
+        </div>
+        
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev" >
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+          
 
 
-<a href="{%url 'new' %}">새글 작성하기</a>
+        <a href="{%url 'new' %}" style="color: black">새글 작성하기</a>
+  
 {% for blog in blogs%}
 
 
 <hr>
+<div style="text-align: center;">
 <a href="{%url 'detail' blog.id%}">
 {{blog.title}}
 <br>
@@ -14,6 +57,15 @@
 <br>
 {{blog.summary}}
 </a>
-{% endfor %}
+</div>
 
+
+{% endfor %}
 {% endblock %}
+
+</body>
+</html>
+
+
+
+

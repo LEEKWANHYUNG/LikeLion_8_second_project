@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><지역별 술 종류></h1><hr>
+   <div>
+       <img src="{% static '강원도.png'%}" alt="Los Angeles" width="170" height="auto">
+       강원도 술
+   </div> <br>
+   <div>
+    <img src="{% static '전라북도.png'%}" alt="Los Angeles" width="170" height="230">
+    전라북도 술
+</div><br>
+<div>
+    <img src="{% static '충청남도.png'%}" alt="Los Angeles" width="200" height="auto">
+    충청남도 술
+</div>
+{% endblock %}
+
+</body>
+</html>
+

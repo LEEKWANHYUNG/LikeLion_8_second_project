@@ -4,9 +4,9 @@
 <form method="POST" action="{% url 'accounts:signup' %}">
     {% csrf_token %}
 
-    아이디: <input type="text" name="username" required="required" placeholder="Your id"><br>
-    패스워드:<input type="password" name="password1" required="required" placeholder="Your password"><br>
-    confirm ps:<input type="password" name="password2" required="required" placeholder="Your password"><br>
+    아이디: <input type="text" name="username" required="required" placeholder="Your id"><br><br><br>
+    패스워드:<input type="password" name="password1" required="required" placeholder="Your password"><br><br><br>
+    confirm ps:<input type="password" name="password2" required="required" placeholder="Your password"><br><br><br>
     <label for="password">너의 비밀번호야 ^^</label>
 
     <input type="submit" value="Sign Up!">
