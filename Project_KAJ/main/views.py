@@ -59,10 +59,15 @@ def edit(request, blog_id):
     edit_blog = get_object_or_404(Blog, pk=blog_id)
     return render(request, 'edit.html', {'blog': edit_blog})
 
+
 def delete(request, blog_id):
     delete_blog = get_object_or_404(Blog, pk=blog_id)
     delete_blog.delete()
     return redirect('home')
 
+
 def seeun(request):
     return render(request, 'seeun.html')
+
+def seyeon(request):
+    return render(request, 'seyeon.html')

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sul talk</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<body style="text-align:center">
+    <h1>
+        <나의 술자리이야기>
+    </h1>
+    <hr>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-6 alert-warning">
+                (익명)<br>
+                저는 술자리에서 안주를 먹었어요
+            </div>
+            <div class="col-sm-9 col-md-6 bg-warning">
+                (익명)<br>
+                저는 술먹고 지하철타고 집왔어요
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+{% endblock %}

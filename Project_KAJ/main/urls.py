@@ -11,6 +11,7 @@ urlpatterns = [
     path('update/<int:blog_id>', views.update, name="update"),
     path('edit/<int:blog_id>', views.edit, name="edit"),
     path('new', views.new, name="new"),
-    path('delete/<int:blog_id>', views.delete, name= "delete"),
+    path('delete/<int:blog_id>', views.delete, name="delete"),
     path('seeun/', views.seeun, name="seeun"),
+    path('seyeon', views.seyeon, name="seyeon"),
 ]
