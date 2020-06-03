@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,13 +22,13 @@
         <!-- The slideshow -->
         <div class="carousel-inner" style="text-align: center;">
           <div class="carousel-item active" >
-            <img src="https://lh3.googleusercontent.com/proxy/NIK_krCt8gryMGy_wW5bxVhJjRDZGBMSNJTfE5zkMJOb3UyoOXNYkS8bhzgq7ffshiVkAeNwoFVQjA5wlG4_ddZFlfvjYFjUZobyZ3vtMdY8QkKzOPwihg" alt="Los Angeles" width="500" height="auto">
+            <img src="{% static '술자리.jpg'%}" alt="Los Angeles" width="500" height="auto">
           </div>
           <div class="carousel-item">
-            <img src="https://lh3.googleusercontent.com/proxy/NIK_krCt8gryMGy_wW5bxVhJjRDZGBMSNJTfE5zkMJOb3UyoOXNYkS8bhzgq7ffshiVkAeNwoFVQjA5wlG4_ddZFlfvjYFjUZobyZ3vtMdY8QkKzOPwihg" alt="Chicago" width="500" height="auto">
+            <img src="{% static '술자리예절.jpg'%}" alt="Chicago" width="265" height="auto">
           </div>
           <div class="carousel-item">
-            <img src="https://lh3.googleusercontent.com/proxy/NIK_krCt8gryMGy_wW5bxVhJjRDZGBMSNJTfE5zkMJOb3UyoOXNYkS8bhzgq7ffshiVkAeNwoFVQjA5wlG4_ddZFlfvjYFjUZobyZ3vtMdY8QkKzOPwihg" alt="New York" width="500" height="auto">
+            <img src="{% static '술자리.jpg'%}" alt="New York" width="500" height="auto">
           </div>
         </div>
         
